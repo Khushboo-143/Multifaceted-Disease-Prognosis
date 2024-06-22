@@ -1,0 +1,342 @@
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Information</title>
+    <style>
+        body {
+            font-family: 'Cambria', sans-serif;
+            background-color:aquamarine;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        .disease-container {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px;
+            width: 80%; /* Adjusted to 80% of the viewport width */
+            text-align: center;
+        }
+
+        h2 {
+            color: #4e0374;
+            font-size: 30px; /* Adjusted font size */
+            margin-bottom: 10px;
+        }
+        h3 {
+            color: #4e0374;
+            font-size: 28px; /* Adjusted font size */
+            margin-top: 10px;
+        }
+
+        p {
+            color: #555;
+            font-size: 21px; /* Adjusted font size */
+            margin-bottom: 15px;
+
+        }
+
+        ul {
+            padding-left: 20px;
+            text-align: left;
+            font-size: 23px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to the Disease Information Page</h1>
+
+    <div class="disease-container">
+        <h2>Heart Disease</h2>
+        <p>
+            Heart disease refers to a range of conditions that affect your heart. It includes diseases of the blood vessels,
+            such as coronary artery disease, heart rhythm problems (arrhythmias), and heart defects you're born with (congenital
+            heart defects).
+        </p>
+        <h3>Symptoms:</h3>
+        <ul>
+            <li>Chest pain or discomfort</li>
+            <li>Shortness of breath</li>
+            <li>Fatigue</li>
+            <li>Rapid or irregular heartbeat</li>
+            <li>Dizziness or fainting</li>
+        </ul>
+    </div>
+
+    <div class="disease-container">
+        <h2>Diabetes</h2>
+        <p>
+            Diabetes is a chronic condition that affects how your body turns food into energy. There are three main types of
+            diabetes: type 1, type 2, and gestational diabetes.
+        </p>
+        <h3>Symptoms:</h3>
+        <ul>
+            <li>Increased thirst and hunger</li>
+            <li>Frequent urination</li>
+            <li>Unexplained weight loss</li>
+            <li>Fatigue</li>
+            <li>Blurred vision</li>
+        </ul>
+    </div>
+
+    <div class="disease-container">
+        <h2>Breast Cancer</h2>
+        <p>
+            Breast cancer is a type of cancer that starts in the cells of the breast. It can occur in both men and women, but
+            it is far more common in women.
+        </p>
+        <h3>Symptoms:</h3>
+        <ul>
+            <li>New lump in the breast or underarm</li>
+            <li>Changes in the size, shape, or appearance of the breast</li>
+            <li>Unexplained pain in the breast or nipple</li>
+            <li>Nipple discharge, other than breast milk</li>
+            <li>Skin changes on the breast</li>
+        </ul>
+    </div>
+
+    <div class="disease-container">
+        <h2>Parkinson's Disease</h2>
+        <p>
+            Parkinson's disease is a neurodegenerative disorder that affects movement. It develops gradually, sometimes
+            starting with a barely noticeable tremor in just one hand.
+        </p>
+        <h3>Symptoms:</h3>
+        <ul>
+            <li>Tremors or shaking</li>
+            <li>Stiffness of the limbs and trunk</li>
+            <li>Slowness of movement</li>
+            <li>Impaired balance and coordination</li>
+            <li>Speech changes</li>
+        </ul>
+    </div>
+    <div class="disease-container">
+        <ul>
+            <li><a href="/diabetes">Diabetes</a></li>
+            <li><a href="/heart">Heart</a></li>
+            <li><a href="/parkinson">Parkinson</a></li>
+            <li><a href="/breast"> Breast</a></li>
+          </ul>
+    </div>
+
+</body>
+
+</html> 
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multifaceted Disease Prognosis</title>
+    <style>
+        body {
+            font-family: 'Cambria', sans-serif;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpHkOtiYz2Md6M6nTvDSlrBqdFUu-EN9dD8f-beiUs-OvMkO-DsRWuoQotkLyxJ8k_YV8&usqp=CAU');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .disease-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+            width: 60%;
+        }
+
+        .disease-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            margin-bottom: 20px;
+            width: 100%;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .disease-container:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            color: #4e0374;
+            font-size: 24px; /* Increased font size */
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #4e0374;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        p {
+            color: #555;
+            font-size: 20px; /* Increased font size */
+            margin-bottom: 15px;
+        }
+
+        ul {
+            padding-left: 20px;
+            text-align: left;
+            font-size: 18px; /* Increased font size */
+        }
+
+        .disease-link {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            margin: 10px;
+            padding: 8px 16px;
+            border-radius: 5px;
+            background-color: #4e0374;
+            transition: background-color 0.3s ease;
+        }
+
+        .disease-link:hover {
+            background-color: #6a0a97;
+        }
+
+        .predict-button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .predict-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to Multifaceted Disease Prognosis using Machine Learning</h1>
+
+    <div class="disease-column">
+        <div class="disease-container">
+            <h2>Diabetes</h2>
+            <p>
+                Diabetes is a chronic condition that affects how your body turns food into energy. There are three main types of
+                diabetes: type 1, type 2, and gestational diabetes.
+            </p>
+            <h3>Symptoms:</h3>
+            <ul>
+                <li>Increased thirst and hunger</li>
+                <li>Frequent urination</li>
+                <li>Unexplained weight loss</li>
+                <li>Fatigue</li>
+                <li>Blurred vision</li>
+            </ul>
+        </div>
+        <a href="/diabetes" class="disease-link">Predict Diabetes</a>
+    </div>
+
+    <div class="disease-column">
+        <div class="disease-container">
+            <h2>Heart Disease</h2>
+            <p>
+                Heart disease refers to a range of conditions that affect your heart. It includes diseases of the blood vessels,
+                such as coronary artery disease, heart rhythm problems (arrhythmias), and heart defects you're born with (congenital
+                heart defects).
+            </p>
+            <h3>Symptoms:</h3>
+            <ul>
+                <li>Chest pain or discomfort</li>
+                <li>Shortness of breath</li>
+                <li>Fatigue</li>
+                <li>Rapid or irregular heartbeat</li>
+                <li>Dizziness or fainting</li>
+            </ul>
+        </div>
+        <a href="/heart" class="disease-link">Predict Heart Disease</a>
+    </div>
+
+    <div class="disease-column">
+        <div class="disease-container">
+            <h2>Parkinson's Disease</h2>
+            <p>
+                Parkinson's disease is a neurodegenerative disorder that affects movement. It develops gradually, sometimes
+                starting with a barely noticeable tremor in just one hand.
+            </p>
+            <h3>Symptoms:</h3>
+            <ul>
+                <li>Tremors or shaking</li>
+                <li>Stiffness of the limbs and trunk</li>
+                <li>Slowness of movement</li>
+                <li>Impaired balance and coordination</li>
+                <li>Speech changes</li>
+            </ul>
+        </div>
+        <a href="/parkinson" class="disease-link">Predict Parkinson's Disease</a>
+    </div>
+
+    <div class="disease-column">
+        <div class="disease-container">
+            <h2>Breast Cancer</h2>
+            <p>
+                Breast cancer is a type of cancer that starts in the cells of the breast. It can occur in both men and women, but
+                it is far more common in women.
+            </p>
+            <h3>Symptoms:</h3>
+            <ul>
+                <li>New lump in the breast or underarm</li>
+                <li>Changes in the size, shape, or appearance of the breast</li>
+                <li>Unexplained pain in the breast or nipple</li>
+                <li>Nipple discharge, other than breast milk</li>
+                <li>Skin changes on the breast</li>
+            </ul>
+        </div>
+        <a href="/breast" class="disease-link">Predict Breast Cancer</a>
+    </div>
+
+</body>
+
+</html>

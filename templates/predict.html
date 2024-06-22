@@ -1,0 +1,77 @@
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>RiskAssess | Prediction</title>
+     <!-- Add your CSS and JavaScript links here if needed -->
+     <style>
+         body {
+             font-family: 'Arial', sans-serif;
+             background-color: #f4f4f4;
+             margin: 0;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             height: 100vh;
+             background-image: url('/static/predictimg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+         }
+ 
+         .container {
+             text-align: center;
+         }
+ 
+         .positive {
+             background-color: #dff0d8;
+             border: 1px solid #3c763d;
+             color: #3c763d;
+             padding: 15px;
+             margin: 20px;
+             border-radius: 5px;
+         }
+ 
+         .negative {
+             background-color: #f2dede;
+             border: 1px solid #a94442;
+             color: #a94442;
+             padding: 15px;
+             margin: 20px;
+             border-radius: 5px;
+         }
+ 
+         .back-button {
+             background-color: #036c74;
+             color: #fff;
+             padding: 10px 20px;
+             text-decoration: none;
+             border-radius: 5px;
+             font-weight: bold;
+         }
+     </style>
+ </head>
+ 
+ <body>
+     <div class="container">
+         {% if pred == 1 %}
+         <div class="positive">
+             <h2>POSITIVE</h2>
+             <p>The patient might have the disease.</p>
+         </div>
+         {% else %}
+         <div class="negative">
+             <h2>NEGATIVE</h2>
+             <p>The patient is healthy.</p>
+         </div>
+         {% endif %}
+         <a href="{{ url_for('home') }}" class="back-button">Back to Home</a>
+     </div>
+ </body>
+ 
+ </html>
+ 

@@ -1,0 +1,276 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parkinson's Disease Predictor</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url('/static/bg5.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .card-container {
+            width: 80%;
+        }
+
+        .card {
+            border: 1px solid #63a1c8; /* Light blue border */
+            background-color: #c3d8e2; /* Light blue background */
+            width: 100%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        input[type="text"] {
+            border: 1px solid #63a1c8; /* Light blue border */
+            background-color: #edf6f9; /* Very light blue background */
+            width: calc(45% - 10px);
+            font-size: 16px;
+            height: 40px;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            padding: 8px; /* Adjusted padding for better input appearance */
+        }
+
+        input[type="submit"] {
+            background-color: #3a5f80; /* Darker blue submit button color */
+            width: 100%;
+            font-size: 20px;
+            height: 40px;
+            color: white;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1f3d53; /* Darker blue on hover */
+        }
+
+        h1 {
+            color: #1f3d53; /* Dark blue heading color */
+            text-align: center;
+        }
+
+        center {
+            width: 100%;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card-container">
+        <center>
+            <h1>Parkinson's Disease Predictor</h1>
+        </center>
+        <div class="card">
+            <form action="/predictParkinson" method="POST">
+                <div class="form-group">
+                    <input type="text" name="MDVP:Fo(Hz)" placeholder="MDVP:Fo(Hz)">
+                    <input type="text" name="MDVP:Fhi(Hz)" placeholder="MDVP:Fhi(Hz)">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="MDVP:Flo(Hz)" placeholder="MDVP:Flo(Hz)">
+                    <input type="text" name="MDVP:Jitter(%)" placeholder="MDVP:Jitter(%)">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="MDVP:Jitter(Abs)" placeholder="MDVP:Jitter(Abs)">
+                    <input type="text" name="MDVP:RAP" placeholder="MDVP:RAP">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="MDVP:PPQ" placeholder="MDVP:PPQ">
+                    <input type="text" name="Jitter:DDP" placeholder="Jitter:DDP">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="MDVP:Shimmer" placeholder="MDVP:Shimmer">
+                    <input type="text" name="MDVP:Shimmer(dB)" placeholder="MDVP:Shimmer(dB)">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="Shimmer:APQ3" placeholder="Shimmer:APQ3">
+                    <input type="text" name="Shimmer:APQ5" placeholder="Shimmer:APQ5">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="MDVP:APQ" placeholder="MDVP:APQ">
+                    <input type="text" name="Shimmer:DDA" placeholder="Shimmer:DDA">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="NHR" placeholder="NHR">
+                    <input type="text" name="HNRRPDE" placeholder="HNRRPDE">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="DFA" placeholder="DFA">
+                    <input type="text" name="spread1" placeholder="spread1">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="spread2" placeholder="spread2">
+                    <input type="text" name="D2" placeholder="D2">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="PPE" placeholder="PPE">
+                </div>
+                <input type="submit" value="Predict">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parkinson's Disease Predictor</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0; /* Light gray background */
+            background-image: url('/static/parkinson.jpg');
+
+        }
+
+        .card-container {
+            width: 80%;
+        }
+
+        .card {
+            border: 1px solid #63a1c8; /* Light blue border */
+            background-color: #c3d8e2; /* Light blue background */
+            width: 100%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        input[type="text"] {
+            border: 1px solid #63a1c8; /* Light blue border */
+            background-color: #edf6f9; /* Very light blue background */
+            width: calc(45% - 10px);
+            font-size: 16px;
+            height: 40px;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            padding: 8px; /* Adjusted padding for better input appearance */
+        }
+
+        input[type="submit"] {
+            background-color: #3a5f80; /* Darker blue submit button color */
+            width: 100%;
+            font-size: 20px;
+            height: 40px;
+            color: white;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1f3d53; /* Darker blue on hover */
+        }
+
+        h1 {
+            color: #1f3d53; /* Dark blue heading color */
+            text-align: center;
+        }
+
+        center {
+            width: 100%;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card-container">
+        <center>
+            <h1>Parkinson's Disease Predictor</h1>
+        </center>
+        <div class="card">
+            <form action="/predictParkinson" method="POST">
+                <div class="form-group">
+                    <input type="text" name="MDVP:Fo(Hz)" placeholder="MDVP:Fo(Hz)">
+                    <input type="text" name="MDVP:Fhi(Hz)" placeholder="MDVP:Fhi(Hz)">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="MDVP:Flo(Hz)" placeholder="MDVP:Flo(Hz)">
+                    <input type="text" name="MDVP:Jitter(%)" placeholder="MDVP:Jitter(%)">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="MDVP:Jitter(Abs)" placeholder="MDVP:Jitter(Abs)">
+                    <input type="text" name="MDVP:RAP" placeholder="MDVP:RAP">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="MDVP:PPQ" placeholder="MDVP:PPQ">
+                    <input type="text" name="Jitter:DDP" placeholder="Jitter:DDP">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="MDVP:Shimmer" placeholder="MDVP:Shimmer">
+                    <input type="text" name="MDVP:Shimmer(dB)" placeholder="MDVP:Shimmer(dB)">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="Shimmer:APQ3" placeholder="Shimmer:APQ3">
+                    <input type="text" name="Shimmer:APQ5" placeholder="Shimmer:APQ5">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="MDVP:APQ" placeholder="MDVP:APQ">
+                    <input type="text" name="Shimmer:DDA" placeholder="Shimmer:DDA">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="NHR" placeholder="NHR">
+                    <input type="text" name="HNR" placeholder="HNR">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="RPDE" placeholder="RPDE">
+                    <input type="text" name="DFA" placeholder="DFA">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="spread1" placeholder="spread1">
+                    <input type="text" name="spread2" placeholder="spread2">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="D2" placeholder="D2">
+                    <input type="text" name="PPE" placeholder="PPE">
+                </div>
+                <input type="submit" value="Predict">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
+

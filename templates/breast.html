@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Predictor</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(#f5e3e6, #f0c2c8); /* Pink gradient background */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background: url('/static/breastcancer.jpg') ; 
+        }
+
+        .card-container {
+            width: 90%;
+            max-width: 600px;
+        }
+
+        .card {
+            border: 1px solid #e799a3; /* Light pink border */
+            background-color: #f9ded9; /* Light pink background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        input[type="text"] {
+            border: 1px solid #e799a3; /* Light pink border */
+            background-color: #f8e5e0; /* Very light pink background */
+            width: calc(50% - 10px);
+            font-size: 14px;
+            height: 30px;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            padding: 8px; /* Adjusted padding for better input appearance */
+        }
+
+        input[type="submit"] {
+            background-color: #b6707d; /* Darker pink submit button color */
+            width: 100%;
+            font-size: 18px;
+            height: 40px;
+            color: white;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #944d5a; /* Darker pink on hover */
+        }
+
+        h1 {
+            color: #944d5a; /* Dark pink heading color */
+            text-align: center;
+            font-size: 24px; /* Larger font size for better visibility */
+            margin-bottom: 20px; /* Adjusted margin for better spacing */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card-container">
+        <h1>Breast Cancer Predictor</h1>
+        <div class="card">
+            <form action="/predictbreast" method="POST">
+                <div class="form-group">
+                    <input type="text" name="id" placeholder="ID">
+                    <input type="text" name="radius_mean" placeholder="Radius Mean">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="texture_mean" placeholder="Texture Mean">
+                    <input type="text" name="perimeter_mean" placeholder="Perimeter Mean">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="area_mean" placeholder="Area Mean">
+                    <input type="text" name="smoothness_mean" placeholder="Smoothness Mean">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="compactness_mean" placeholder="Compactness Mean">
+                    <input type="text" name="concavity_mean" placeholder="Concavity Mean">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="concave_points_mean" placeholder="Concave Points Mean">
+                    <input type="text" name="symmetry_mean" placeholder="Symmetry Mean">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="fractal_dimension_mean" placeholder="Fractal Dimension Mean">
+                    <input type="text" name="radius_se" placeholder="Radius SE">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="texture_se" placeholder="Texture SE">
+                    <input type="text" name="perimeter_se" placeholder="Perimeter SE">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="area_se" placeholder="Area SE">
+                    <input type="text" name="smoothness_se" placeholder="Smoothness SE">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="compactness_se" placeholder="Compactness SE">
+                    <input type="text" name="concavity_se" placeholder="Concavity SE">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="concave_points_se" placeholder="Concave Points SE">
+                    <input type="text" name="symmetry_se" placeholder="Symmetry SE">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="fractal_dimension_se" placeholder="Fractal Dimension SE">
+                    <input type="text" name="radius_worst" placeholder="Radius Worst">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="texture_worst" placeholder="Texture Worst">
+                    <input type="text" name="perimeter_worst" placeholder="Perimeter Worst">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="area_worst" placeholder="Area Worst">
+                    <input type="text" name="smoothness_worst" placeholder="Smoothness Worst">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="compactness_worst" placeholder="Compactness Worst">
+                    <input type="text" name="concavity_worst" placeholder="Concavity Worst">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="concave_points_worst" placeholder="Concave Points Worst">
+                    <input type="text" name="symmetry_worst" placeholder="Symmetry Worst">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="fractal_dimension_worst" placeholder="Fractal Dimension Worst">
+                </div>
+                <input type="submit" value="Predict">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
